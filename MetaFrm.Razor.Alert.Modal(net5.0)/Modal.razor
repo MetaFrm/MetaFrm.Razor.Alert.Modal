@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+@if (ModalMessage != null && ModalMessage.IsVisible)
+{
+    <div class="modal fade show" style="display:block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-2">
+                <div class="modal-header rounded-top-2">
+                    <h5 class="modal-title text-truncate">@ModalMessage.Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                    <div class="modal-body text-break">
+                    @ModalMessage.Text
+                </div>
+                <div class="modal-footer rounded-bottom-2">
+                    <button class="fade fieldset" @ref="focusElement" />
+                    @if (@ModalMessage.Buttons != null)
+                    { 
+                        @foreach (string action in @ModalMessage.Buttons.Keys)
+                        {
+                            <button type="button" class="@ModalMessage.Buttons[action]" @onclick="() => OnClick(action)">@action</button>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}

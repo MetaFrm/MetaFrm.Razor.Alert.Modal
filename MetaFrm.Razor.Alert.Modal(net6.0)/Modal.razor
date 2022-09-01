@@ -1,0 +1,33 @@
+﻿@using MetaFrm.Control
+@using Microsoft.AspNetCore.Components.Web
+@inherits BaseComponent
+
+@if (this.ModalMessage != null && this.ModalMessage.IsVisible)
+{
+    <div class="modal fade show" style="display:block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title text-truncate">@this.ModalMessage.Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="this.Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                    <div class="modal-body text-break">
+                    @this.ModalMessage.Text
+                </div>
+                <div class="modal-footer">
+                    <button id="focuselement" class="fade fieldset" />
+                    @if (this.ModalMessage.Buttons != null)
+                    { 
+                        @foreach (string action in this.ModalMessage.Buttons.Keys)
+                        {
+                            <button type="button" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)"  disabled="@this.ModalViewModel.IsBusy">@action</button>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
