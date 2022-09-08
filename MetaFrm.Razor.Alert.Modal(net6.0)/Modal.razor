@@ -4,25 +4,23 @@
 
 @if (this.ModalMessage != null && this.ModalMessage.IsVisible)
 {
-    <div class="modal fade show" style="display:block;">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
+    <div class="modal fade show" tabindex="-1" style="display:block;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content shadow-lg-90">
                 <div class="modal-header">
-                        <h5 class="modal-title text-truncate">@this.ModalMessage.Title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="this.Close">
-                        <span aria-hidden="true"></span>
-                    </button>
+                    <h5 class="modal-title text-truncate">@this.ModalMessage.Title</h5>
+                    <button type="button" class="btn btn-outline-primary btn-sm btn-noborder me-1 rounded float-end" data-bs-dismiss="modal" aria-label="Close" @onclick="this.Close"><span class="oi oi-x" /></button>
                 </div>
-                    <div class="modal-body text-break">
+                <div class="modal-body text-break">
                     @this.ModalMessage.Text
                 </div>
                 <div class="modal-footer">
                     <button id="focuselement" class="fade fieldset" />
                     @if (this.ModalMessage.Buttons != null)
-                    { 
+                    {
                         @foreach (string action in this.ModalMessage.Buttons.Keys)
                         {
-                            <button type="button" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)"  disabled="@this.ModalViewModel.IsBusy">@action</button>
+                            <button type="button" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)" disabled="@this.ModalViewModel.IsBusy">@action</button>
                         }
                     }
                 </div>
