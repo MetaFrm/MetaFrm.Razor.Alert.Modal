@@ -29,9 +29,20 @@ namespace MetaFrm.Razor.Alert
             if (this.ModalMessage != null && this.ModalMessage.IsVisible)
             {
                 if (this.ModalMessage != null && this.ModalMessage.IsVisible)
+                {
+                    if (this.ModalMessage.Buttons != null && this.ModalMessage.Buttons.Keys.Count == 1)
+                    {
 #pragma warning disable CA2012 // 올바르게 ValueTasks 사용
-                    this.JSRuntime?.InvokeVoidAsync("ElementFocus", "focuselement");
+                        this.JSRuntime?.InvokeVoidAsync("ElementFocus", $"bt_{this.ModalMessage.Buttons.Keys.FirstOrDefault()}");
 #pragma warning restore CA2012 // 올바르게 ValueTasks 사용
+                    }
+                    else
+                    {
+#pragma warning disable CA2012 // 올바르게 ValueTasks 사용
+                        this.JSRuntime?.InvokeVoidAsync("ElementFocus", "focuselement");
+#pragma warning restore CA2012 // 올바르게 ValueTasks 사용
+                    }
+                }
             }
         }
 

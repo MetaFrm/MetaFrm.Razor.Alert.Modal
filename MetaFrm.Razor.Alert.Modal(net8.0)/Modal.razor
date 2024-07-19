@@ -8,7 +8,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content shadow-lg-90">
                 <div class="modal-header">
-                    <h5 class="modal-title text-truncate">@this.ModalMessage.Title</h5>
+                    <h5 class="modal-title text-truncate">@Localization[this.ModalMessage.Title ?? ""]</h5>
                     <button type="button" class="btn btn-outline-primary btn-sm btn-noborder me-1 rounded float-end" data-bs-dismiss="modal" aria-label="Close" @onclick="this.Close"><span class="oi oi-x" /></button>
                 </div>
                 <div class="modal-body text-break m-2">
@@ -20,7 +20,7 @@
                     {
                         @foreach (string action in this.ModalMessage.Buttons.Keys)
                         {
-                            <button type="button" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)" disabled="@this.ModalViewModel.IsBusy">@action</button>
+                            <button type="button" id="@($"bt_{action}")" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)" disabled="@this.ModalViewModel.IsBusy">@action</button>
                         }
                     }
                 </div>
