@@ -12,7 +12,7 @@
                     <button type="button" class="btn btn-outline-primary btn-sm btn-noborder me-1 rounded float-end" data-bs-dismiss="modal" aria-label="Close" @onclick="this.Close"><span class="oi oi-x" /></button>
                 </div>
                 <div class="modal-body text-break m-2">
-                    @this.ModalMessage.Text
+                    @Localization[this.ModalMessage.Text ?? ""]
                 </div>
                 <div class="modal-footer">
                     <button id="focuselement" class="fade fieldset" />
@@ -20,7 +20,7 @@
                     {
                         @foreach (string action in this.ModalMessage.Buttons.Keys)
                         {
-                            <button type="button" id="@($"bt_{action}")" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)" disabled="@this.ModalViewModel.IsBusy">@action</button>
+                            <button type="button" id="@($"bt_{action}")" class="@this.ModalMessage.Buttons[action]" @onclick="() => this.OnClick(action)" disabled="@this.ModalViewModel.IsBusy">@Localization[action]</button>
                         }
                     }
                 </div>
