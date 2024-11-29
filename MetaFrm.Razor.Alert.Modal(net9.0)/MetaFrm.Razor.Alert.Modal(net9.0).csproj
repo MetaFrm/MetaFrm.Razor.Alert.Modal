@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>MetaFrm.Razor.Alert</RootNamespace>
     <AssemblyName>MetaFrm.Razor.Alert.Modal</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>MetaFrm.Razor.Alert.Modal.net7.0</PackageId>
-    <Version>7.0.3.44</Version>
+    <PackageId>MetaFrm.Razor.Alert.Modal.net9.0</PackageId>
+    <Version>9.0.4.3</Version>
     <Authors>dsun</Authors>
     <Company>Meta Framework</Company>
     <Copyright>Copyright 2024. dsun all rights reserved.</Copyright>
@@ -34,8 +34,8 @@
     <SupportedPlatform Include="browser" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MetaFrm.Core.net7.0" Version="7.0.3.44" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.20" />
+    <PackageReference Include="MetaFrm.Core.net9.0" Version="9.0.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
