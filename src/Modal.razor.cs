@@ -9,13 +9,22 @@ namespace MetaFrm.Razor.Alert
     /// </summary>
     public partial class Modal
     {
-        internal ModalViewModel ModalViewModel = Factory.CreateViewModel<ModalViewModel>();
+        internal ModalViewModel ModalViewModel = new();
 
         /// <summary>
         /// ToastMessage
         /// </summary>
         [Parameter]
         public MetaFrm.Alert.Modal? ModalMessage { get; set; }
+
+        /// <summary>
+        /// OnInitializedAsync
+        /// </summary>
+        /// <returns></returns>
+        protected override void OnInitialized()
+        {
+            this.ModalViewModel = this.CreateViewModel<ModalViewModel>();
+        }
 
         /// <summary>
         /// OnAfterRenderAsync
