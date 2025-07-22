@@ -9,7 +9,7 @@ namespace MetaFrm.Razor.Alert
     /// </summary>
     public partial class Modal
     {
-        internal ModalViewModel ModalViewModel = new();
+        internal ModalViewModel ModalViewModel = new(null);
 
         /// <summary>
         /// ToastMessage
