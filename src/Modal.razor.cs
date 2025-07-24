@@ -53,6 +53,8 @@ namespace MetaFrm.Razor.Alert
 
         private void OnClick(string action)
         {
+            if (this.ModalViewModel.IsBusy) return;
+
             try
             {
                 this.ModalViewModel.IsBusy = true;
