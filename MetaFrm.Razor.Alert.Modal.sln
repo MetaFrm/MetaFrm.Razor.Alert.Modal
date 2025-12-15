@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11205.157 d18.0
+VisualStudioVersion = 18.0.11205.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2D28B11C-DCC4-47D2-B2D8-8E59C921EF9B}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,8 +13,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{507804DC-04DA-40DD-B5DD-51E1B77831EA}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build_10.0.yml = .github\workflows\build_10.0.yml
-		.github\workflows\build_8.0.yml = .github\workflows\build_8.0.yml
-		.github\workflows\build_9.0.yml = .github\workflows\build_9.0.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{1E12FC8D-70AD-43D8-A670-F09286AAE37F}"
@@ -29,10 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", 
 		src\ViewModels\ModalViewModel.cs = src\ViewModels\ModalViewModel.cs
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaFrm.Razor.Alert.Modal(net8.0)", "MetaFrm.Razor.Alert.Modal(net8.0)\MetaFrm.Razor.Alert.Modal(net8.0).csproj", "{53DB4B98-4C09-41DA-9038-840214C4A526}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaFrm.Razor.Alert.Modal(net9.0)", "MetaFrm.Razor.Alert.Modal(net9.0)\MetaFrm.Razor.Alert.Modal(net9.0).csproj", "{8BBB6A67-55E5-47E9-9E6F-DF0975B739DD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaFrm.Razor.Alert.Modal(net10.0)", "MetaFrm.Razor.Alert.Modal(net10.0)\MetaFrm.Razor.Alert.Modal(net10.0).csproj", "{06E50ED4-94EE-459F-C793-2C35F1B61C23}"
 EndProject
 Global
@@ -41,14 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53DB4B98-4C09-41DA-9038-840214C4A526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53DB4B98-4C09-41DA-9038-840214C4A526}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53DB4B98-4C09-41DA-9038-840214C4A526}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53DB4B98-4C09-41DA-9038-840214C4A526}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BBB6A67-55E5-47E9-9E6F-DF0975B739DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BBB6A67-55E5-47E9-9E6F-DF0975B739DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BBB6A67-55E5-47E9-9E6F-DF0975B739DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BBB6A67-55E5-47E9-9E6F-DF0975B739DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06E50ED4-94EE-459F-C793-2C35F1B61C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06E50ED4-94EE-459F-C793-2C35F1B61C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06E50ED4-94EE-459F-C793-2C35F1B61C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
